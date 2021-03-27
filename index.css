@@ -1,0 +1,214 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #f7f7f7;
+  color: #46494a;
+}
+
+.container{
+  padding: 10px;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  max-width: 420px;
+  position: relative;
+  margin: auto;
+}
+
+/* Form */
+.form, .board, .gameOver{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
+  padding-top: 150px;
+}
+
+.titulo{
+  margin-bottom: 20px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+form div{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  width: 100%;
+}
+form div label{
+  padding-right: 15px;
+}
+form div input{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #3f3f3f;
+  background: transparent;
+}
+form div input:focus{
+  outline: none;
+}
+.img-form{
+  position: absolute;
+  top: 0;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+form button{
+  background: #4caf50;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 30px;
+}
+.titulo-main{
+  position: absolute;
+  top: 10px;
+  color: #fff;
+  z-index: 10;
+  font-size: 3rem;
+  font-family: 'Averia Serif Libre', cursive;
+  width: 100%;
+  text-align: center;
+}
+.oculto{
+  display: none;
+}
+/* board */
+.board:not(.oculto){
+  padding-top: 70px;
+}
+.titulo-main.board-mode{
+  color: #607d8b;
+}
+.board-score{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-score .division{
+  background: black;
+  width: 1px;
+  height: 8rem;
+  display: block;
+  margin: 0 10px;
+}
+.board-score .equipo{
+  width: 45%;
+  font-size: 1.5rem;
+}
+.board-score .equipo.casa{
+  text-align: right;
+}
+.board-score .equipo.visitante{
+  text-align: left;
+}
+.board .entradas{
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.board .entradas span{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* controlar los iconos de bate y bola */
+.board-score .bate,.board-score .guante{
+  display: none;
+  width: ;
+} 
+.board-score .casa .bate, .board-score .casa .guante{
+  margin-left: auto;
+}
+.board-score.turno-casa .casa .bate,  .board-score.turno-casa .visitante .guante{
+  display: flex;
+}
+.board-score.turno-vis .casa .guante,  .board-score.turno-vis .visitante .bate{
+  display: flex;
+}
+
+.agregarCarreras{
+  text-align: center;
+  margin-top: 50px;
+}
+.agregarCarreras p{
+  font-size: 1.5rem;
+}
+.agregarCarreras img.remove{
+  width: 43px;
+  height: 43px;
+}
+.agregarCarreras button{
+  background: transparent;
+  border: none;
+  margin: 10px;
+}
+.agregarCarreras .btns{
+  display: flex;
+  justify-content: center;
+}
+
+/* Botón de out */
+.agregarOut{
+  text-align: center;
+}
+.agregarOut p{
+  font-size: 2rem;
+}
+.agregarOut button{
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 5px 30px;
+  border-radius: 5px;
+}
+/* terminar juego */
+.endGame{
+  margin-top: 80px;
+}
+.endGame button{
+  background: #f44336;
+  border: none;
+  padding: 5px 25px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* Juego Terminado */
+.gameOver{
+  padding-top: 0px;
+}
+.gameOver h2{
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.gameOver .ganador{
+  font-size: 3rem;
+}
+
+/* footer */
+.footer{
+  position: absolute;
+  height: 5%;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background: #9e9e9e;
+  color: #ffffffd9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <p class="titulo-main" id="titulo-main">SCORE</p>
+  <div class="container">
+    <div class="form" id="formulario">
+      <img class="img-form" src="./img-1.jpg" alt="baseball">
+      <h2 class="titulo">Nombres de equipos</h2>
+      <form>
+        <div>
+          <label for="nombre_casa">Casa:</label>
+          <input type="text" id="nombre_casa" placeholder="Nombre casa">
+        </div>
+        <div>
+          <label for="nombre_visitante">Visitante:</label>
+          <input type="text" id="nombre_visitante" placeholder="Nombre visitante">
+        </div>
+        <button type="button" id="agregar_equipos">Agregar</button>
+      </form>
+    </div>
+
+    <div class="board oculto" id="board">
+      <div class="entradas">
+        Entrada: <span id="entrada"></span>
+      </div>
+      <div class="board-score turno-casa" id="board-score">
+        <div class="equipo casa">
+          <img class="bate" src="./icono-bat.png" alt="icono bate">
+          <img class="guante" src="./icono-guante.png" alt="icono guante">
+          <p class="nombre" id="nombreCasa"></p>
+          <p class="carreras" id="carrerasCasa"></p>
+        </div>
+        <span class="division"></span>
+        <div class="equipo visitante">
+          <img class="bate" src="./icono-bat.png" alt="icono bate">
+          <img class="guante" src="./icono-guante.png" alt="icono guante">
+          <p class="nombre" id="nombreVisitante"></p>
+          <p class="carreras" id="carrerasVisitante"></p>
+        </div>
+      </div>
+      <div class="agregarCarreras" id="agregarCarreras">
+        <p>Agregar/Quitar carreras</p>
+        <div class="btns">
+          <button id="addCarrera"><img src="./icon-add.png" alt="icono agregar"></button>
+          <button id="removeCarrera"><img class="remove" src="./icon-remove.png" alt="icono remover"></button>
+        </div>
+      </div>
+      <div class="agregarOut">
+        <p>Agregar Out: <span id="outs"></span></p>
+        <button id="addOut">Agregar</button>
+      </div>
+
+      <div class="endGame">
+        <button id="endGame">Terminar Juego</button>
+      </div>
+    </div>
+
+    <div class="gameOver oculto" id="gameOver">
+      <h2>Juego Terminado</h2>
+      <div class="board-score">
+        <div class="equipo casa">
+          <p class="nombre" id="nombreCasaEnd"></p>
+          <p class="carreras" id="carrerasCasaEnd"></p>
+        </div>
+        <span class="division"></span>
+        <div class="equipo visitante">
+          <p class="nombre" id="nombreVisitanteEnd"></p>
+          <p class="carreras" id="carrerasVisitanteEnd"></p>
+        </div>
+      </div>
+      <p style="margin-top: 70px;">Ganador</p>
+      <div class="ganador " id="ganador"></div>
+    </div>
+    <div class="footer">
+      <p>Created By Armando Ruiz</p>
+    </div>
+  </div>
+
+  <script src="./confetti.js-master/confetti.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
