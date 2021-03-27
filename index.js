@@ -122,4 +122,6 @@ document.getElementById('addCarrera').addEventListener('click', () => score.addC
 document.getElementById('removeCarrera').addEventListener('click', () => score.removeCarrera());
 document.getElementById('addOut').addEventListener('click', () => score.addOut());
 document.getElementById('endGame').addEventListener('click', () => score.endGame());
+document.getElementById('nuevoJuego').addEventListener('click', () => window.location.reload());
+
 score.init();

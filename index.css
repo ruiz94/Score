@@ -199,6 +199,16 @@ form button{
   font-size: 3rem;
 }
 
+.nuevoJuego{
+  background: #4caf50;
+  border: none;
+  padding: 5px 25px;
+  border-radius: 5px;
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 60px;
+}
+
 /* footer */
 .footer{
   position: absolute;
