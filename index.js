@@ -2,7 +2,7 @@ const Score = function(){
   this.data = {
     jugando: false,
     entrada: 1,
-    turno: 'casa',
+    turno: 'visitante',
     outs: 0
   }
 }
@@ -113,6 +113,7 @@ Score.prototype.endGame = function(){
   document.getElementById('board').classList.add('oculto');
   document.getElementById('gameOver').classList.remove('oculto');
   sessionStorage.removeItem('score');
+  document.getElementsByClassName('titulo-main')[0].classList.remove('board-mode');
   confetti.start();
 }
 const score = new Score();
