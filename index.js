@@ -36,6 +36,9 @@ Score.prototype.newJuego = function(){
   }else{
     alert('Ingresa datos')
   }
+
+  document.getElementById('nombre_visitante').value = '';
+  document.getElementById('nombre_casa').value = '';
 }
 Score.prototype.update = function(){
   if(this.data.jugando){
@@ -85,11 +88,11 @@ Score.prototype.addCarrera = function(){
 Score.prototype.addOut = function(){
   this.data.outs = this.data.outs + 1;
   if(this.data.outs >= 3){
-    if(this.data.turno == 'casa'){
-      this.data.turno = 'visitante';
+    if(this.data.turno == 'visitante'){
+      this.data.turno = 'casa';
     }else{
       this.data.entrada = this.data.entrada + 1;
-      this.data.turno = 'casa';
+      this.data.turno = 'visitante';
     }
     this.data.outs = 0;
   }

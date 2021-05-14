@@ -97,7 +97,8 @@ form button{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  box-shadow: 0 0 10px -5px black;
   border-radius: 10px;
 }
 .gameOver .board-score{
@@ -124,8 +125,8 @@ form button{
   font-size: 2rem;
   margin-bottom: 20px;
   border-bottom: 1px solid;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  /* border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px; */
   padding: 0 15px;
 }
 .board .entradas span{
@@ -136,7 +137,7 @@ form button{
 /* controlar los iconos de bate y bola */
 .board-score .bate,.board-score .guante{
   display: none;
-  width: ;
+  /* width: 100%; */
 } 
 .board-score .casa .bate, .board-score .casa .guante{
   margin-left: auto;
@@ -205,6 +206,7 @@ form button{
 .gameOver h2{
   font-size: 3rem; 
   margin-bottom: 2rem;
+  text-align: center;
 }
 .gameOver .ganador{
   font-size: 3rem;
@@ -227,7 +229,7 @@ form button{
   bottom: 0;
   width: 100%;
   left: 0;
-  background: #9e9e9e;
+  background: #666666;
   color: #ffffffd9;
   display: flex;
   justify-content: center;
